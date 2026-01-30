@@ -1,0 +1,35 @@
+#include<stdio.h>
+void mAdd(int a[10][10],int b[10][10],int n) //Def-1
+{
+    int i,j,c[10][10];
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        c[i][j]=a[i][j]+b[i][j];
+    }
+    printf("\nAddition Resultant Matrix-1:\n");
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        printf("%d",c[i][j]);
+        printf("\n");
+    }
+}
+int main()
+{
+    int a[10][10],b[10][10],n,i,j; //declaration
+
+    printf("\nEnter Order of the Matrices:\n");
+    scanf("%d",&n);
+
+ printf("\nEnter data into Matrix-1:\n");
+    for(i=0;i<n;i++)
+    for(j=0;j<n;j++)
+        scanf("%d",&a[i][j]);
+printf("\nEnter data into Matrix-1:\n");
+    for(i=0;i<n;i++)
+    for(j=0;j<n;j++)
+        scanf("%d",&b[i][j]);
+    mAdd(a,b,n); //Call-1
+    return 0;
+}
